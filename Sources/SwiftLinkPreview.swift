@@ -582,7 +582,7 @@ extension SwiftLinkPreview {
                 if value.isEmpty {
                     let fromBody: String = self.crawlCode(htmlCode, minimum: SwiftLinkPreview.titleMinimumRelevant)
                     if !fromBody.isEmpty {
-                        result.title = fromBody.decoded.extendedTrim
+                        result.bodyTitle = fromBody.decoded.extendedTrim
                         return (htmlCode.replace(fromBody, with: ""), result)
                     }
                 } else {
